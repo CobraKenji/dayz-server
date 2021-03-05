@@ -10,7 +10,7 @@ sudo apt install iptables-persistent -y
    
 Next we need to run this:   
 ```
-wget -qN https://raw.githubusercontent.com/CobraKenji/dayz-server/main/script/dayz_setup.sh && bash dayz_setup.sh`
+wget -qN https://raw.githubusercontent.com/CobraKenji/dayz-server/main/script/dayz_setup.sh && bash dayz_setup.sh
 ```
 to install...
 0 winehq-stable
