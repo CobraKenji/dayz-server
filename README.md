@@ -18,6 +18,9 @@ sudo apt upgrade
 sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
 sudo apt update
 sudo apt upgrade
+
+# https://www.systutorials.com/maximum-number-of-mmaped-ranges-and-how-to-set-it-on-linux/
+sysctl -w vm.max_map_count=655300
 ```   
    
 Ensure the required ports are set.   
