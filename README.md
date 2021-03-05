@@ -1,5 +1,25 @@
 # dayz-server
    
+Ubuntu 18 specific issues apparently, these were my exact steps. Likely we can just add-apt-repo, update, upgrade and ignore the wget and fix-broken stuff...   
+```
+su - mysudouser
+
+wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
+wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
+sudo dpkg -i libfaudio0_19.07-0~bionic_amd64.deb libfaudio0_19.07-0~bionic_i386.deb
+
+sudo apt --fix-broken install
+sudo apt update
+sudo apt upgrade
+sudo apt --fix-broken install
+sudo apt autoremove --purge
+sudo apt upgrade
+
+sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
+sudo apt update
+sudo apt upgrade
+```   
+   
 Ensure the required ports are set.   
 Game INBOUND 2302 udp   
 Steam INBOUND 2304,27016 udp   
